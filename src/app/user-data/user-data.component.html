@@ -1,0 +1,28 @@
+<div class="container-lg">
+    <h2 class="my-4 text-center">Users Data</h2>
+    <!-- <p>Table is just a mapping of objects to table rows with <code>ngFor</code></p> -->
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name`</th>
+                <th scope="col">Email</th>
+                <th scope="col">Delete record</th>
+                <!-- <th scope="col">Delete record</th> -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let row of userData">
+                <th>{{row.id}}</th>
+                <td>{{row.firstName}}</td>
+                <td>{{row.lastName}}</td>
+                <td>{{row.email}}</td>
+                <td>
+                    <!-- <button class="btn btn-outline-success">Edit</button> -->
+                    <button class="mx-3 btn btn-danger" (click)="deleteUser(row)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
